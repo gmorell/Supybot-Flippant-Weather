@@ -70,7 +70,7 @@ class Weather2014(callbacks.Plugin):
     weathercacheclear = wrap(clearcache)
     
     def metar(self,irc,msg,args,text):
-        station = text.split(' ')[0]
+        station = text.split(' ')[0].upper()
         r = requests.get('http://weather.noaa.gov/pub/data/observations/metar/stations/%s.TXT' % station)
         report = r.text.split('\n')[1]
         irc.sendMsg(ircmsgs.privmsg(msg.args[0],report))
