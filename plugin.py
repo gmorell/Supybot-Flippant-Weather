@@ -26,7 +26,7 @@ lookup_str = "http://api.wunderground.com/api/%s/conditions/forecast/q/IA/" % WU
 
 CACHE_PERIOD = 600 # seconds = 10min
     
-        
+         
 class Weather2014(callbacks.Plugin):
     """Add the help for "@plugin help Weather2014" here
     This should describe *how* to use this plugin."""
